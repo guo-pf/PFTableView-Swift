@@ -1,0 +1,2 @@
+# PFTableView-Swift
+tableView和collectionView 的瘦身。将tableview以及collectionview的DataSource抽离出来。VC中代码只需很少一部分即可。
