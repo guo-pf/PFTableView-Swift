@@ -17,18 +17,20 @@ VC中大体代码：
         }
     }
 
-创建 class MyTableDataSource: PFTabDataSource {
-    //可设置Cell
-    override  func cellConfig(_ tableView: UITableView,_ indexPath: IndexPath, _ model : Any) -> PFTabCellConfigurable?{}
-   // 可设置表头 
-    override func heardView(_ tableView: UITableView,_ model : Any?) -> PFTabHeardFootConfigurable? {}
-     //可设置表尾
-    override func footView(_ tableView: UITableView,_ model : Any?) -> PFTabHeardFootConfigurable? {}
-     //可设置组头
-    override func heardInSectionConfig(_ tableView: UITableView,_ section: Int, _ model: [Any], _ maxCount : Int ) -> PFTabHeardFootConfigurable?{}
-    //可设置组尾
-    override func footerInSectionConfig(_ tableView: UITableView,_ section: Int, _ model: [Any], _ maxCount : Int ) -> PFTabHeardFootConfigurable?{}
-    }
+创建DataSource
+
+     class MyTableDataSource: PFTabDataSource {
+         //可设置Cell
+         override  func cellConfig(_ tableView: UITableView,_ indexPath: IndexPath, _ model : Any) -> PFTabCellConfigurable?{}
+        // 可设置表头 
+         override func heardView(_ tableView: UITableView,_ model : Any?) -> PFTabHeardFootConfigurable? {}
+          //可设置表尾
+         override func footView(_ tableView: UITableView,_ model : Any?) -> PFTabHeardFootConfigurable? {}
+          //可设置组头
+         override func heardInSectionConfig(_ tableView: UITableView,_ section: Int, _ model: [Any], _ maxCount : Int ) -> PFTabHeardFootConfigurable?{}
+         //可设置组尾
+         override func footerInSectionConfig(_ tableView: UITableView,_ section: Int, _ model: [Any], _ maxCount : Int ) -> PFTabHeardFootConfigurable?{}
+         }
     
     其中cell 和 表头 组头 必须继承PFCellViewModel，并绑定对应的model
     例如：
