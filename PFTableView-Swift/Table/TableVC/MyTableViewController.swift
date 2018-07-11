@@ -28,9 +28,7 @@ class MyTableViewController: UIViewController {
                                   heardInSection: hs,
                                   footInSection: fs)
         }
-        
-        UIColor.orange
-        
+
     }
 
     override func didReceiveMemoryWarning() {
